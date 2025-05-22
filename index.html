@@ -1,37 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Front-end Books</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Top Front-end Books</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-  <header class="books__header">
-    <h1>Top Front-end Books</h1>
-    <nav class="menu">
-      <a href="#about">About</a>
-      <a href="#books">Books</a>
-      <a href="#contact">Contact</a>
-    </nav>
+  <header class="shadow-md">
+    <div class="max-w-6xl mx-auto px-4 py-6 flex flex-col md:flex-row items-center justify-between">
+      <h1 class="text-3xl font-bold text-green-600 transform cursor-default">Top Front-end Books</h1>
+      <nav class="mt-4 md:mt-0 space-x-4 text-sm font-medium">
+        <a href="#about" class="text-gray-700 hover:text-green-500 transition duration-300">About</a>
+        <a href="#books" class="text-gray-700 hover:text-green-500 transition duration-300">Books</a>
+        <a href="#contact" class="text-gray-700 hover:text-green-500 transition duration-300">Contact</a>
+      </nav>
+    </div>
   </header>
 
-  <section id="about" class="about">
-    <h2>About This Collection</h2>
-    <p>Here are some of the best books to learn front-end development, covering HTML, CSS, JavaScript, and more.</p>
-    <img src="https://via.placeholder.com/100" alt="Bookshelf image">
+  <section id="about" class="py-12 px-4 max-w-4xl mx-auto text-center">
+    <h2 class="text-2xl text-green-800 font-semibold mb-4">About This Collection</h2>
+    <p class="text-gray-600 mb-6">Here are some of the best books to learn front-end development, covering HTML, CSS, JavaScript, and more.</p>
+    <img src="https://as2.ftcdn.net/jpg/00/65/70/77/1000_F_65707740_9dy3kO5vd8NsuoN1vAmVuTHr82DvCUvB.jpg" alt="Bookshelf image" class="mx-auto shadow-xl h-[45vh] object-scale-down"/>
   </section>
 
-  <section id="books" class="books">
-    <h2>Featured Books</h2>
-    <div id="book-list" class="book-list"></div>
+  <section id="books" class="py-12 px-4">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-2xl font-semibold text-center mb-8 text-green-800">Featured Books</h2>
+      <div id="book-list" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      </div>
+    </div>
   </section>
 
-  <section id="contact" class="contact">
-    <h2>Contact</h2>
-    <p>For suggestions or book recommendations, reach out at <a href="mailto:frontbooks@example.com">frontbooks@example.com</a>.</p>
+  <section id="contact" class="py-12 px-4 bg-gray-100">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="text-2xl font-semibold mb-4">Contact</h2>
+      <p class="text-gray-600">For suggestions or book recommendations, reach out at 
+        <a href="mailto:frontbooks@example.com" class="text-green-600">frontbooks@example.com</a>.
+      </p>
+    </div>
   </section>
 
-  <script src="app.js"></script>
+  <script src="./app.js"></script>
 </body>
 </html>
