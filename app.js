@@ -7,14 +7,14 @@ document.addEventListener('DOMContentLoaded', function () {
       .then(books => {
         books.forEach(book => {
           const bookElement = document.createElement('div');
-          bookElement.classList.add('book', `book-${book.id}`);
+          bookElement.className = `rounded-lg shadow-md p-6 transform transition duration-300 hover:scale-105 hover:shadow-xl animate-fadeIn`;
           bookElement.innerHTML = `
-            <h3>${book.titulo}</h3>
-            <img src="${book.imagem}" alt="${book.titulo}" width="200px">
-            <p>${book.resumo}</p>
-          `;//caso queria controlar o tamanho da imagem no sass/css, remova a propriedade width="200px"
+            <h3 class="text-xl font-semibold text-green-600 mb-2">${book.titulo}</h3>
+            <img src="${book.imagem}" alt="${book.titulo}" class="w-full h-auto max-h-72 object-contain rounded-md mb-4 shadow-sm" />
+            <p class="text-gray-600 text-sm">${book.resumo}</p>
+          `;
           bookList.appendChild(bookElement);
-        });
+        });             
       })
       .catch(error => {
         console.error('Erro ao carregar os livros:', error);
